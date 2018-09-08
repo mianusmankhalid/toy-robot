@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "toy:test": "nyc --reporter=text-lcov mocha --require babel-core/register"
+    "toy:test": "nyc --reporter=lcov mocha --require babel-core/register"
   },
   "repository": {
     "type": "git",
