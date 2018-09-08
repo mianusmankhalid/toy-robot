@@ -16,7 +16,7 @@
 - [ ] Enable test scripts
 - [ ] Creation of test cases
 - [ ] Introducing CI (Travis)
-- [ ] Creation of Table-top
+- [x] Creation of Table-top
 - [ ] Robot Controller (identify and create)
 - [ ] Command structure (analyze as per problem)
 - [ ] Command executor (implementation of comand structure)
