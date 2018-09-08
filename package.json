@@ -4,7 +4,8 @@
   "description": "The application is a simulation of a toy robot moving on a square table-top",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "toy:test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/mianusmankhalid/toy-robot/issues"
   },
-  "homepage": "https://github.com/mianusmankhalid/toy-robot#readme"
+  "homepage": "https://github.com/mianusmankhalid/toy-robot#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
