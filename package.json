@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "toy:test": "nyc --reporter=text-lcov mocha"
+    "toy:test": "nyc --reporter=text-lcov mocha --require babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/mianusmankhalid/toy-robot#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1"
