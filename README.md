@@ -10,7 +10,7 @@
 - Possible improvement: code coverage
 
 ### Possible tasks
-- [ ] Understand the problem
+- [x] Understand the problem
 - [ ] Creation of npm repo
 - [ ] Completion of npm scripts
 - [ ] Enable test scripts
@@ -21,3 +21,10 @@
 - [ ] Command executor (implementation of comand structure)
 - [ ] Unknown (unclear) elements
 - [ ] Raise issues in GitHub
+
+---
+
+### Scenarios (discoveries)
+- We are working on geometrical coordinates system to construct the table top instead of working in array dimensions
+- Command will follow the point mention above
+- Under geometrical coordinate system our edge cases will lie under (+,+) region
