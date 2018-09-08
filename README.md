@@ -11,10 +11,11 @@
 
 ### Possible tasks
 - [x] Understand the problem
-- [ ] Creation of npm repo
+- [x] Creation of npm repo
 - [ ] Completion of npm scripts
 - [ ] Enable test scripts
 - [ ] Creation of test cases
+- [ ] Introducing CI (Travis)
 - [ ] Creation of Table-top
 - [ ] Robot Controller (identify and create)
 - [ ] Command structure (analyze as per problem)
