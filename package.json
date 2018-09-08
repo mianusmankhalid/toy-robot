@@ -1,0 +1,26 @@
+{
+  "name": "toy-robot",
+  "version": "1.0.0",
+  "description": "The application is a simulation of a toy robot moving on a square table-top",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mianusmankhalid/toy-robot.git"
+  },
+  "keywords": [
+    "REA",
+    "toy-robot",
+    "nodejs",
+    "travis",
+    "automation"
+  ],
+  "author": "Usman Khalid <mianusman@msn.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mianusmankhalid/toy-robot/issues"
+  },
+  "homepage": "https://github.com/mianusmankhalid/toy-robot#readme"
+}
