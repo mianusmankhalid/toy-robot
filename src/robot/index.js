@@ -22,11 +22,10 @@ export default class {
     };
   }
 
-  GetRobotPlayer() {
+  GetRobotPosition() {
     if (!_.isEmpty(this.robot)) {
-      return this.robot;
+      return this.robot.position;
     }
     return null;
   }
-  
 }
