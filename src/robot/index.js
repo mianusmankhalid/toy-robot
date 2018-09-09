@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 /**
  * Creating a robot with position of (x, y) coordinate and cardinal direction .
  */
@@ -19,4 +21,12 @@ export default class {
       }
     };
   }
+
+  GetRobotPlayer() {
+    if (!_.isEmpty(this.robot)) {
+      return this.robot;
+    }
+    return null;
+  }
+  
 }
