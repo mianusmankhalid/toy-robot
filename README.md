@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mianusmankhalid/toy-robot.svg?branch=master)](https://travis-ci.org/mianusmankhalid/toy-robot)
+
 # Initial Plan
 
 ## Technology details
@@ -14,8 +16,8 @@
 - [x] Creation of npm repo
 - [ ] Completion of npm scripts
 - [ ] Enable test scripts
-- [ ] Creation of test cases
-- [ ] Introducing CI (Travis)
+- [x] Creation of test cases
+- [x] Introducing CI (Travis)
 - [x] Creation of Table-top
 - [ ] Robot Controller (identify and create)
 - [ ] Command structure (analyze as per problem)
