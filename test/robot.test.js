@@ -46,13 +46,12 @@ describe("A true robot", function() {
     });
 
     it("should rotate to left on the table", function() {
-      expect(robot.PlaceRobot(0, 0, Direction.SOUTH)).to.be.true;
       robot.RotateToLeft();
 
       expect(robot.GetRobotPosition()).to.deep.equal({
         x: 0,
         y: 0,
-        direction: Direction.EAST
+        direction: Direction.WEST
       });
     });
 
@@ -86,6 +85,47 @@ describe("A true robot", function() {
         direction: Direction.NORTH
       });
     });
+
+    it("should rotate to right on the table", function() {
+      robot.RotateToRight();
+
+      expect(robot.GetRobotPosition()).to.deep.equal({
+        x: 0,
+        y: 0,
+        direction: Direction.EAST
+      });
+    });
+
+    it("should rotate to right for all cardinal directions", function() {
+        expect(robot.PlaceRobot(0, 0, Direction.NORTH)).to.be.true;
+        expect(robot.RotateToRight()).to.be.true;
+        expect(robot.GetRobotPosition()).to.deep.equal({
+          x: 0,
+          y: 0,
+          direction: Direction.EAST
+        });
+        expect(robot.PlaceRobot(0, 0, Direction.EAST)).to.be.true;
+        expect(robot.RotateToRight()).to.be.true;
+        expect(robot.GetRobotPosition()).to.deep.equal({
+          x: 0,
+          y: 0,
+          direction: Direction.SOUTH
+        });
+        expect(robot.PlaceRobot(0, 0, Direction.SOUTH)).to.be.true;
+        expect(robot.RotateToRight()).to.be.true;
+        expect(robot.GetRobotPosition()).to.deep.equal({
+          x: 0,
+          y: 0,
+          direction: Direction.WEST
+        });
+        expect(robot.PlaceRobot(0, 0, Direction.WEST)).to.be.true;
+        expect(robot.RotateToRight()).to.be.true;
+        expect(robot.GetRobotPosition()).to.deep.equal({
+          x: 0,
+          y: 0,
+          direction: Direction.NORTH
+        });
+      });
   });
 
   describe("Given the presence w.r.t geometrical coordinate system", function() {
