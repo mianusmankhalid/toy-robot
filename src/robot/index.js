@@ -3,22 +3,21 @@ import Command from "../command/command";
 import Move from "../command/move";
 import Left from "../command/left";
 
-/**
- * Creating a robot with position of (x, y) coordinate and cardinal direction .
- */
-
 export default class Robot {
   /**
-   * Constructs a robot position
-   * @param {int} x
-   * @param {int} y
-   * @param {string} direction
+   * Construct a Robot within the boundaries of the table
+   * @param {Table} table
    */
 
   constructor(table) {
     this.table = table;
     this.robot = null;
   }
+
+  /**
+   * Hang around within the boundaries of the table
+   * @param {Command} command
+   */
 
   _safeToHangAround(intentedCommand) {
     let tableEdges = this.table.Boundaries;
@@ -29,6 +28,11 @@ export default class Robot {
       intentedCommand.Y >= tableEdges.y1
     );
   }
+
+  /**
+   * Updates intended state of Robot
+   * @param {Command} command
+   */
 
   _changeRobotState(command) {
     this.robot = { position: command };

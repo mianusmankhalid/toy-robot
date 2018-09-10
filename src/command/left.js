@@ -4,6 +4,10 @@ import Command from "./command";
 import _ from "lodash";
 
 export default class extends Abstract {
+  /**
+   * Rotates robot to 90 degree anti-clockwise
+   * @param {Command} command
+   */
   static Execute(command) {
     let directions = [
       Direction.NORTH,
@@ -12,7 +16,6 @@ export default class extends Abstract {
       Direction.WEST
     ];
 
-    // _.values(Direction);
     let result = _.findIndex(directions, item =>
       _.isEqual(item, command.Direction)
     );

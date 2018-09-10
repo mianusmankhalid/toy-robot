@@ -4,7 +4,7 @@ import Command from "./command";
 
 export default class extends Abstract {
   /**
-   * Moves toy one unit further in the same direction
+   * Moves robot one unit further in the same direction
    * @param {Command} command
    */
   static Execute(command) {
