@@ -1,4 +1,5 @@
 import _ from "lodash";
+import Command from "../command/command";
 
 /**
  * Creating a robot with position of (x, y) coordinate and cardinal direction .
@@ -20,10 +21,10 @@ export default class {
   _safeToHangAround(intentedCommand) {
     let tableEdges = this.table.Boundaries;
     return (
-      intentedCommand.x <= tableEdges.x2 &&
-      intentedCommand.x >= tableEdges.x1 &&
-      intentedCommand.y <= tableEdges.y2 &&
-      intentedCommand.y >= tableEdges.y1
+      intentedCommand.X <= tableEdges.x2 &&
+      intentedCommand.X >= tableEdges.x1 &&
+      intentedCommand.Y <= tableEdges.y2 &&
+      intentedCommand.Y >= tableEdges.y1
     );
   }
 
@@ -33,11 +34,7 @@ export default class {
   }
 
   PlaceRobot(x, y, direction) {
-    let result = {
-      x: x,
-      y: y,
-      direction: direction
-    };
+    let result = new Command(x, y, direction);
 
     if (this._safeToHangAround(result)) {
       return this._changeRobotState(result);
