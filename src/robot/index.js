@@ -12,8 +12,19 @@ export default class {
    * @param {string} direction
    */
 
-  constructor() {
+  constructor(table) {
+    this.table = table;
     this.robot = null;
+  }
+
+  _safeToHangAround(intentedCommand) {
+    let tableEdges = this.table.Boundaries;
+    return (
+      intentedCommand.x <= tableEdges.x2 &&
+      intentedCommand.x >= tableEdges.x1 &&
+      intentedCommand.y <= tableEdges.y2 &&
+      intentedCommand.y >= tableEdges.y1
+    );
   }
 
   _changeRobotState(command) {
@@ -28,7 +39,11 @@ export default class {
       direction: direction
     };
 
-    return this._changeRobotState(result);
+    if (this._safeToHangAround(result)) {
+      return this._changeRobotState(result);
+    }
+
+    return false;
   }
 
   GetRobotPosition() {
