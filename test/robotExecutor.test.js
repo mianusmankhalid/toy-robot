@@ -15,6 +15,13 @@ describe("Robot Executor for user inputs", () => {
             y: 3,
             direction: Direction.NORTH
           };
+        },
+        Move: function() {
+          return {
+            x: 2,
+            y: 3,
+            direction: Direction.NORTH
+          };
         }
       });
     });
@@ -39,7 +46,14 @@ describe("Robot Executor for user inputs", () => {
       robotControllerMock.verify();
     });
 
-    it("should return the same output", () => {
+    it("should parse the MOVE command", () => {
+      robotControllerMock.expects("Move");
+
+      RobotExecutor.ExecuteAction("MOVE", robotControllerMock.object);
+      robotControllerMock.verify();
+    });
+
+    it("should return the valid output", () => {
       robotControllerMock.restore();
 
       expect(
@@ -52,6 +66,8 @@ describe("Robot Executor for user inputs", () => {
         y: 3,
         direction: Direction.NORTH
       });
+
+      expect(RobotExecutor.ExecuteAction("FAKE", robotControllerMock.object)).to.be.false;
     });
   });
 });
