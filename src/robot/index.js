@@ -1,11 +1,12 @@
 import _ from "lodash";
 import Command from "../command/command";
+import Move from "../command/move";
 
 /**
  * Creating a robot with position of (x, y) coordinate and cardinal direction .
  */
 
-export default class {
+export default class Robot {
   /**
    * Constructs a robot position
    * @param {int} x
@@ -31,6 +32,20 @@ export default class {
   _changeRobotState(command) {
     this.robot = { position: command };
     return true;
+  }
+
+  _execute(command) {
+    if (!_.isEmpty(this.robot)) {
+      let commandResult = command.Execute(this.robot.position);
+      if (this._safeToHangAround(commandResult)) {
+        return this._changeRobotState(commandResult);
+      }
+    }
+    return false;
+  }
+
+  Move() {
+    return this._execute(Move);
   }
 
   PlaceRobot(x, y, direction) {
