@@ -25,12 +25,23 @@ describe("A true robot", function() {
     });
 
     it("should move within the boundaries of the table", function() {
-      robot.PlaceRobot(0, 1, Direction.NORTH);
+      robot.Move();
 
       expect(robot.GetRobotPosition()).to.deep.equal({
         x: 0,
         y: 1,
         direction: Direction.NORTH
+      });
+    });
+
+    it("shouldn't move at the edge of the table to prevent from falling", function() {
+      robot.PlaceRobot(0, 0, Direction.SOUTH);
+      robot.Move();
+
+      expect(robot.GetRobotPosition()).to.deep.equal({
+        x: 0,
+        y: 0,
+        direction: Direction.SOUTH
       });
     });
   });
