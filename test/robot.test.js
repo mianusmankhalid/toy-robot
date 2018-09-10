@@ -6,7 +6,8 @@ describe("A true robot", function() {
     let robot = null;
 
     beforeEach(() => {
-        robot = new Robot(0, 0, "SOUTH");
+        robot = new Robot();
+        robot.PlaceRobot(0, 0, "SOUTH");
     });
 
     it("should have valid position", function() {

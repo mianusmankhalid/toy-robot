@@ -12,14 +12,23 @@ export default class {
    * @param {string} direction
    */
 
-  constructor(x, y, direction) {
-    this.robot = {
-      position: {
-        x: x,
-        y: y,
-        direction: direction
-      }
+  constructor() {
+    this.robot = null;
+  }
+
+  _changeRobotState(command) {
+    this.robot = { position: command };
+    return true;
+  }
+
+  PlaceRobot(x, y, direction) {
+    let result = {
+      x: x,
+      y: y,
+      direction: direction
     };
+
+    return this._changeRobotState(result);
   }
 
   GetRobotPosition() {
