@@ -2,6 +2,11 @@ import Parse from "../../helpers/parser";
 import _ from "lodash";
 
 export default class {
+  /**
+   * Execute action commands provided by user
+   * @param {string} text
+   * @param {Robot} controller
+   */
   static ExecuteAction(text, controller) {
     let regex = {
       place: /^\s*PLACE\s+([\d]+)\s*,\s*([\d]+)\s*,\s*(EAST|WEST|NORTH|SOUTH)\s*$/gim,
