@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 /**
  * Create an object for cardinal directions
  * Freeze the object for further modification
