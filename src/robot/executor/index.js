@@ -5,12 +5,14 @@ export default class {
   static ExecuteAction(text, controller) {
     let regex = {
       place: /^\s*PLACE\s+([\d]+)\s*,\s*([\d]+)\s*,\s*(EAST|WEST|NORTH|SOUTH)\s*$/gim,
-      move: /^\s*MOVE\s*$/gim
+      move: /^\s*MOVE\s*$/gim,
+      left: /^\s*LEFT\s*$/gim
     };
 
     if (regex.move.exec(text)) {
       return controller.Move();
-    } else {
+    } else if (regex.left.exec(text)) return controller.RotateToLeft();
+    else {
       let place = regex.place.exec(text);
       if (!_.isEmpty(place)) {
         return controller.PlaceRobot(
