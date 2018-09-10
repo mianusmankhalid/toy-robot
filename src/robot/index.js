@@ -2,6 +2,7 @@ import _ from "lodash";
 import Command from "../command/command";
 import Move from "../command/move";
 import Left from "../command/left";
+import Right from "../command/right";
 
 export default class Robot {
   /**
@@ -47,6 +48,10 @@ export default class Robot {
       }
     }
     return false;
+  }
+
+  RotateToRight() {
+    return this._execute(Right);
   }
 
   RotateToLeft() {
