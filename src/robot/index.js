@@ -1,6 +1,7 @@
 import _ from "lodash";
 import Command from "../command/command";
 import Move from "../command/move";
+import Left from "../command/left";
 
 /**
  * Creating a robot with position of (x, y) coordinate and cardinal direction .
@@ -42,6 +43,10 @@ export default class Robot {
       }
     }
     return false;
+  }
+
+  RotateToLeft() {
+    return this._execute(Left);
   }
 
   Move() {
