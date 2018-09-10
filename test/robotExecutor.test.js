@@ -22,6 +22,13 @@ describe("Robot Executor for user inputs", () => {
             y: 3,
             direction: Direction.NORTH
           };
+        },
+        RotateToLeft: function() {
+          return {
+            x: 2,
+            y: 3,
+            direction: Direction.NORTH
+          };
         }
       });
     });
@@ -53,6 +60,13 @@ describe("Robot Executor for user inputs", () => {
       robotControllerMock.verify();
     });
 
+    it("should parse the LEFT command", () => {
+        robotControllerMock.expects("RotateToLeft");
+  
+        RobotExecutor.ExecuteAction("LEFT", robotControllerMock.object);
+        robotControllerMock.verify();
+      });
+    
     it("should return the valid output", () => {
       robotControllerMock.restore();
 
@@ -67,7 +81,8 @@ describe("Robot Executor for user inputs", () => {
         direction: Direction.NORTH
       });
 
-      expect(RobotExecutor.ExecuteAction("FAKE", robotControllerMock.object)).to.be.false;
+      expect(RobotExecutor.ExecuteAction("FAKE", robotControllerMock.object)).to
+        .be.false;
     });
   });
 });
