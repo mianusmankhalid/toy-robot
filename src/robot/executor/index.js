@@ -6,12 +6,14 @@ export default class {
     let regex = {
       place: /^\s*PLACE\s+([\d]+)\s*,\s*([\d]+)\s*,\s*(EAST|WEST|NORTH|SOUTH)\s*$/gim,
       move: /^\s*MOVE\s*$/gim,
-      left: /^\s*LEFT\s*$/gim
+      left: /^\s*LEFT\s*$/gim,
+      right: /^\s*RIGHT\s*$/gim
     };
 
     if (regex.move.exec(text)) {
       return controller.Move();
     } else if (regex.left.exec(text)) return controller.RotateToLeft();
+    else if (regex.right.exec(text)) return controller.RotateToRight();
     else {
       let place = regex.place.exec(text);
       if (!_.isEmpty(place)) {
