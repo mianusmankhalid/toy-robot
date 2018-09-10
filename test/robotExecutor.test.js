@@ -36,6 +36,13 @@ describe("Robot Executor for user inputs", () => {
             y: 3,
             direction: Direction.NORTH
           };
+        },
+        GetRobotPosition: function() {
+          return {
+            x: 2,
+            y: 3,
+            direction: Direction.NORTH
+          };
         }
       });
     });
@@ -78,6 +85,13 @@ describe("Robot Executor for user inputs", () => {
       robotControllerMock.expects("RotateToRight");
 
       RobotExecutor.ExecuteAction("RIGHT", robotControllerMock.object);
+      robotControllerMock.verify();
+    });
+
+    it("should parse the REPORT command", () => {
+      robotControllerMock.expects("GetRobotPosition");
+
+      RobotExecutor.ExecuteAction("REPORT", robotControllerMock.object);
       robotControllerMock.verify();
     });
 
