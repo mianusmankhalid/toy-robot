@@ -86,6 +86,16 @@ describe("A true robot", function() {
         direction: Direction.NORTH
       });
     });
+
+    it("should rotate to right on the table", function() {
+      robot.PlaceRobot(0, 0, Direction.EAST);
+      
+      expect(robot.GetRobotPosition()).to.deep.equal({
+        x: 0,
+        y: 0,
+        direction: Direction.EAST
+      });
+    });
   });
 
   describe("Given the presence w.r.t geometrical coordinate system", function() {
