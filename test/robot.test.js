@@ -1,6 +1,7 @@
 import { expect } from "chai";
 import Robot from "../src/robot";
 import Table from "../src/table";
+import Direction from "../src/helpers/direction";
 
 describe("A true robot", function() {
   describe("Given the presence on the table", function() {
@@ -8,14 +9,14 @@ describe("A true robot", function() {
 
     beforeEach(() => {
       robot = new Robot(new Table(5, 5));
-      robot.PlaceRobot(0, 0, "SOUTH");
+      robot.PlaceRobot(0, 0, Direction.SOUTH);
     });
 
     it("should place anywhere on the table", function() {
       expect(robot.GetRobotPosition()).to.deep.equal({
         x: 0,
         y: 0,
-        direction: "SOUTH"
+        direction: Direction.SOUTH
       });
     });
 
@@ -27,7 +28,7 @@ describe("A true robot", function() {
   describe("Given the presence w.r.t geometrical coordinate system", function() {
     it("should not place within the boundaries of table", function() {
       let robot = new Robot(new Table(5, 5));
-      robot.PlaceRobot(6, 6, "SOUTH");
+      robot.PlaceRobot(6, 6, Direction.SOUTH);
       expect(robot.GetRobotPosition()).to.be.null;
     });
   });
