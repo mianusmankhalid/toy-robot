@@ -1,32 +1,42 @@
 [![Build Status](https://travis-ci.org/mianusmankhalid/toy-robot.svg?branch=master)](https://travis-ci.org/mianusmankhalid/toy-robot)
-
 [![Coverage Status](https://coveralls.io/repos/github/mianusmankhalid/toy-robot/badge.svg)](https://coveralls.io/github/mianusmankhalid/toy-robot)
+[![GitHub issues](https://img.shields.io/github/issues/mianusmankhalid/toy-robot.svg)](https://github.com/mianusmankhalid/toy-robot/issues)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/mianusmankhalid/toy-robot.svg)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/mianusmankhalid/toy-robot.svg)
 
-# Initial Plan
+
+# REA Toy Robot
 
 ## Technology details
 
-### Possible stack
+### Stack
 - Node.js
 - Mocha
 - Chai
 - Travis (CI)
-- Possible improvement: code coverage
+- Coveralls
 
-### Possible tasks
-- [x] Understand the problem
-- [x] Creation of npm repo
-- [x] Completion of npm scripts
-- [x] Enable test scripts
-- [x] Creation of test cases
-- [x] Introducing CI (Travis)
-- [x] Creation of Table-top
-- [x] Robot Controller (identify and create)
-- [x] Command structure (analyze as per problem)
-- [x] Command executor (implementation of comand structure)
-- [-] Unknown (unclear) elements
-- [x] Raise issues in GitHub
-- [x] Analyzing user interaction tools
+---
+
+### How to Run
+
+#### Pre Reqs
+- NPM
+- YARN
+##### *Note* Use as per choice
+
+#### Install Dependencies
+```yarn```
+
+#### Run Solution (Interactive)
+```yarn toy:run```
+
+#### Test Solution
+```yarn toy:test```
+
+#### Code Coverage (Coveralls)
+```yarn toy:code_coverage```
+##### *Note* See travis after success step for more info
 
 ---
 
