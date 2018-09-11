@@ -9,3 +9,8 @@ install:
 - yarn install
 script:
 - yarn toy:test
+after_success:
+- export CI_BUILD_NUMBER="$TRAVIS_BUILD_NUMBER"
+- export CI_PULL_REQUEST="$TRAVIS_PULL_REQUEST"
+- export CI_BRANCH="$TRAVIS_BRANCH"
+- yarn toy:code_coverage

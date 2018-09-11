@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/mianusmankhalid/toy-robot.svg?branch=master)](https://travis-ci.org/mianusmankhalid/toy-robot)
 
+[![Coverage Status](https://coveralls.io/repos/github/mianusmankhalid/toy-robot/badge.svg)](https://coveralls.io/github/mianusmankhalid/toy-robot)
+
 # Initial Plan
 
 ## Technology details
@@ -14,7 +16,7 @@
 ### Possible tasks
 - [x] Understand the problem
 - [x] Creation of npm repo
-- [ ] Completion of npm scripts
+- [x] Completion of npm scripts
 - [x] Enable test scripts
 - [x] Creation of test cases
 - [x] Introducing CI (Travis)
@@ -25,7 +27,6 @@
 - [-] Unknown (unclear) elements
 - [x] Raise issues in GitHub
 - [x] Analyzing user interaction tools
-- [ ] Test via integration of components
 
 ---
 
