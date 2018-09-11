@@ -15,15 +15,17 @@
 - [x] Understand the problem
 - [x] Creation of npm repo
 - [ ] Completion of npm scripts
-- [ ] Enable test scripts
+- [x] Enable test scripts
 - [x] Creation of test cases
 - [x] Introducing CI (Travis)
 - [x] Creation of Table-top
 - [x] Robot Controller (identify and create)
 - [x] Command structure (analyze as per problem)
-- [ ] Command executor (implementation of comand structure)
-- [ ] Unknown (unclear) elements
-- [ ] Raise issues in GitHub
+- [x] Command executor (implementation of comand structure)
+- [-] Unknown (unclear) elements
+- [x] Raise issues in GitHub
+- [ ] Analyzing user interaction tools
+- [ ] Test via integration of components
 
 ---
 

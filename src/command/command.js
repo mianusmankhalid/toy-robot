@@ -35,4 +35,11 @@ export default class {
   get Direction() {
     return this.direction;
   }
+
+  /**
+   * To override console.log
+   */
+  inspect(depth, opts) {
+    return this.X + "," + this.Y + "," + this.Direction;
+  }
 }
