@@ -24,7 +24,7 @@
 - [x] Command executor (implementation of comand structure)
 - [-] Unknown (unclear) elements
 - [x] Raise issues in GitHub
-- [ ] Analyzing user interaction tools
+- [x] Analyzing user interaction tools
 - [ ] Test via integration of components
 
 ---
